@@ -1,36 +1,43 @@
 class Car(object):
-    def __init__(self):
-        self.name = name
-        self.model = model
 
+    def __init__(self, *args): #taking arguments provided
+
+      #check if name and model are passed, else set as defualts
+      if len(args) >= 2:
+        self.name = args[0]
+        self.model = args[1]
+      else:
+        self.name = 'General'
+        self.model = 'GM'
+        
+
+      if self.name == 'Porshe' or self.name == 'Koenigsegg': 
+        self.num_of_doors = 2
+      else:
         self.num_of_doors = 4
 
-        if self.name == 'Porshe' or self.name == 'Koenigsegg':
-            self.num_of_doors = 2
+      #check if cartypr is passed, else set as saloon
+      if len(args) >= 3:
+        self.car_type = args[2]
+      else:
+        self.car_type = 'saloon'
 
-        self.cartype = cartype
-
-        if self.cartype != 'trailer':
-            self.cartype = 'saloon'
-
+      #set number of wheels
+      if self.car_type == 'saloon':
         self.num_of_wheels = 4
+      else:
+        self.num_of_wheels = 8
 
-        if self.cartype == 'trailer':
-            self.num_of_wheels = 8
+      self.speed = 0
 
-        self.speed = 0
-
+    #set car type to sallon
     def is_saloon(self):
-        """true if cartype is not trailer
-        """
-        return self.cartype == 'saloon'
+      return self.car_type == 'saloon'
 
-    def drive(self, drive):
-        """change speed depending on cartype * drive
-        """
-        if self.cartype == 'trailer':
-            self.speed = drive * 77 / 7
+    #set speed when car drives
+    def drive(self, speed):
+        if self.car_type == 'saloon':
+            self.speed = speed * (1000 / 3)
         else:
-self.speed = drive * 1
-
-return self
+            self.speed = speed * 11
+        return self
