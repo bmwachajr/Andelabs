@@ -1,5 +1,6 @@
 import unittest
 from unittest import TestCase
+from datatype import data_type
 
 class DataTypeTestCase(TestCase):
 
@@ -24,3 +25,5 @@ class DataTypeTestCase(TestCase):
   def test_str_type(self):
     self.assertEqual(6, data_type('andela'))
     
+if __name__ == "__main__":
+  unittest.main()

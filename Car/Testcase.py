@@ -1,5 +1,6 @@
 import unittest
 from unittest import TestCase
+from CarClass import Car
 
 
 
@@ -76,3 +77,5 @@ class CarClassTest(TestCase):
                              [moving_man_instance, moving_man_type, moving_man.speed],
                              msg='The car drive function should return the instance of the Car class')
                              
+if __name__ == "__main__":
+  unittest.main()

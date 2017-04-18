@@ -1,5 +1,6 @@
 import unittest
 from unittest import TestCase
+from fizzbuzz import fizz_buzz
 
 class FizzBuzzClassTest(TestCase):
     """docstring for FizzBuzz"""
@@ -48,3 +49,5 @@ class FizzBuzzClassTest(TestCase):
           'Only whole number are allowed as input'
         )
         
+if __name__ == "__main__":
+  unittest.main()
