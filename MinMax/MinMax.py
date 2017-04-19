@@ -9,7 +9,17 @@ Disc: A python app that that returns the min and max number from a list.
 
 def find_max_min(list):
   max_min = []
-  max_min.append(list[0])
-  max_min.append(list[-1])
+  
+  list.sort()
+  min = list[0]
+  max = list[-1]
+  
+  if(min == max):
+    n= [len(list)]
+    return n
+  else:
+    max_min.append(min)
+    max_min.append(max)
+    
   return (max_min)
   
