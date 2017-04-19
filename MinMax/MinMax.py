@@ -15,11 +15,10 @@ def find_max_min(list):
   max = list[-1]
   
   if(min == max):
-    n= [len(list)]
-    return n
+    max_min.append(len(list))
+    return (max_min)
   else:
     max_min.append(min)
     max_min.append(max)
-    
-  return (max_min)
+    return (max_min)
   
