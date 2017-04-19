@@ -1,6 +1,7 @@
+ï»¿# coding=<UTF-8>
 import unittest
 from unittest import TestCase
-from wordCount import word_count
+from wordCount import words
 
 class TestWordCounts(TestCase):
 
@@ -58,8 +59,8 @@ class TestWordCounts(TestCase):
 
     def test_word_occurance7(self):
         self.assertDictEqual(
-            {"¡Hola!": 1, "¿Qué": 1, "tal?": 1, "??????!": 1},
-            words('¡Hola! ¿Qué tal? ??????!'),
+            {"Â¡Hola!": 1, "Â¿QuÃ©": 1, "tal?": 1, "??????!": 1},
+            words('Â¡Hola! Â¿QuÃ© tal? ??????!'),
             msg='should count international characters properly'
         )
 
@@ -83,3 +84,6 @@ class TestWordCounts(TestCase):
             words('hello  world'),
             msg='should count multiple spaces as one'
         )
+        
+if __name__ == "__main__":
+  unittest.main()
