@@ -9,3 +9,14 @@ One of the arrays will have one extra number, see below:
 """
 
 def find_missing(array1, array2):
+  if len(array1) == len(array2):
+    return "Nothing to display"
+  else:
+    if len(array1) > len(array2) :
+      for number in array1:
+        if number not in array2:
+          return number
+    else:
+      for number in array2:
+        if number not in array1:
+          return number
