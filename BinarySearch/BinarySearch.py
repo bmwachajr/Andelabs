@@ -18,3 +18,9 @@ you should increase the count, to test how efficient your implementation is.
 """
 
 class BinarySearch():
+  def __init__(self, a, b):
+    
+  def search(self, number):
+    dict = {}
+    dict{count} = no_iterations
+    
