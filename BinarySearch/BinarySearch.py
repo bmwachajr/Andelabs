@@ -34,20 +34,28 @@ class BinarySearch():
       
   def search(self, value):
     dict = {'count':'','index':''}
-    count = 0
     newlist = self.binary_list
     var_len = self.variablelength
     
-    if self.variablelength == 0:
-      midpoint = self.variablelength//2
-      if [midpoint] == value:
-        dict['count'] = 0 
-        dict['index'] = 0 
-      else:
-        if item < self[midpoint] :
-          return
+    first_index = 0
+    last_index = var len - 1
+    midpoint = last_index//2
+    count = 0
     
+    if var_len == 0:
+      return ("Empty List")
     else:
+      while midpoint < last_index:
+        if():
+          midpoint = var_len//2
+          if [midpoint] == value:
+            dict['count'] = 0 
+            dict['index'] = 0 
+            return dict
+          else:
+            if item < newlist[midpoint] :
+              return  search
+      
     
     dict{count} = no_iterations
     dict{index} = no_iterations - 1
