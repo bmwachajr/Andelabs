@@ -19,8 +19,19 @@ you should increase the count, to test how efficient your implementation is.
 
 class BinarySearch():
   def __init__(self, a, b):
+    if isinstance(a, str) and isinstance(a, int):
     
-  def search(self, number):
+      binary_list = []
+      list_length = 0
+      while list_lengtht < a:
+        binary_list.append(b)
+        b += b
+        list_length += 1
+      self.variablelength = len(binary_list)
+      
+    else:
+      raise TypeError("Arguments have to be intergers")
+  def search(self, value):
     dict = {}
     dict{count} = no_iterations
     
