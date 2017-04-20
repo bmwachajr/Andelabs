@@ -1,6 +1,6 @@
 import unittest
 from unittest import TestCase
-from BinarySearch import 
+from BinarySearch import BinarySearch
 
 class ListComprehensionTest(TestCase):
 
@@ -164,3 +164,6 @@ class BinarySearchTest(TestCase):
             search3['index'],
             msg='should return {count: 3, index: -1} for 10000'
         )
+        
+if __name__ == "__main__":
+  unittest.main()

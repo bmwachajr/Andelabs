@@ -1,23 +1,4 @@
-"""
-
-First, you are to create a BinarySearch class, that inherits from the list class the following:
-
-the __init__() takes two integers as parameters, a and b. a is the length of the list to be 
-created and b is the step or difference between consecutive values. It should also initialize
- an instance variablelength`, that returns the number of elements in the array
-
-Once you are done, create another method called search, it will take just one argument which 
-is the value you are to find. The search function should return a dictionary object, which contains
-
-count, the number of times you function iterated to find the index of the number in question index, 
-the index of the number in question
-
-The search method should implement the binary search algorithm, each time you iterate, 
-you should increase the count, to test how efficient your implementation is.
-
-"""
-
-class BinarySearch():
+class BinarySearch(object):
   def __init__(self, a, b):
     if isinstance(a, str) and isinstance(a, int):
     
@@ -38,25 +19,24 @@ class BinarySearch():
     var_len = self.variablelength
     
     first_index = 0
-    last_index = var len - 1
+    last_index = var_len - 1
     midpoint = last_index//2
     count = 0
     
     if var_len == 0:
       return ("Empty List")
     else:
-      while midpoint < last_index:
-        if():
-          midpoint = var_len//2
-          if [midpoint] == value:
-            dict['count'] = 0 
-            dict['index'] = 0 
-            return dict
+      midpoint = var_len//2
+      while first_index < last_index:
+        if newlist[midpoint] == value:
+          dict['count'] = count 
+          dict['index'] = midpoint
+          return dict
+        else:
+          if value < newlist[midpoint]:
+            last_index = midpoint -1
           else:
-            if item < newlist[midpoint] :
-              return  search
+            first_index = midpoint -1
+        count += 1 
       
-    
-    dict{count} = no_iterations
-    dict{index} = no_iterations - 1
     
