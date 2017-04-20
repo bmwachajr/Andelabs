@@ -1,3 +1,4 @@
+import unittest
 from unittest import TestCase
 from Missingnumber import find_missing
 
@@ -23,3 +24,6 @@ class MissingNumberTest(TestCase):
         self.assertListEqual([5, 10, 1],
                              [list1, list2, list3],
                              msg='should return the missing number for lists with similar entries and a missing number')
+                             
+if __name__ == "__main__":
+  unittest.main()

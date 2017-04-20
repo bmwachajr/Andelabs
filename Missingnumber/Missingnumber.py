@@ -10,7 +10,7 @@ One of the arrays will have one extra number, see below:
 
 def find_missing(array1, array2):
   if len(array1) == len(array2):
-    return "Nothing to display"
+    return 0
   else:
     if len(array1) > len(array2) :
       for number in array1:
