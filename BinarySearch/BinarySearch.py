@@ -1,42 +1,62 @@
-class BinarySearch(object):
+class BinarySearch(list):
   def __init__(self, a, b):
-    if isinstance(a, str) and isinstance(a, int):
+    binary_list = []
+    list_length = 0
     
-      binary_list = []
-      list_length = 0
-      while list_lengtht < a:
-        binary_list.append(b)
-        b += b
-        list_length += 1
-      self.variablelength = len(binary_list)
+    while list_length < a:
+      binary_list.append(b)
+      b += b
+      list_length += 1
       
-    else:
-      raise TypeError("Arguments have to be intergers")
+    super(BinarySearch,self).__init__(binary_list)
+    self.length = len(binary_list)
       
   def search(self, value):
     dict = {'count':'','index':''}
-    newlist = self.binary_list
-    var_len = self.variablelength
+
+    self.length = len(self)
     
     first_index = 0
-    last_index = var_len - 1
-    midpoint = last_index//2
+    last_index = self.length - 1
+    midpoint = int((last_index)/2)
     count = 0
     
-    if var_len == 0:
+    if self.length == 0:
       return ("Empty List")
     else:
-      midpoint = var_len//2
-      while first_index < last_index:
-        if newlist[midpoint] == value:
+      while first_index < midpoint:
+        if self[midpoint] == value:
           dict['count'] = count 
           dict['index'] = midpoint
           return dict
-        else:
-          if value < newlist[midpoint]:
+          
+        elif self[first] == value:
+          dict["count"] = count
+          dict["index"] = first_index
+          return dict
+          
+        elif self[last] == value:
+          dict["count"] = count
+          dict["index"] = last_index
+          return dict
+          
+        elif self[first_index] == value:
+          
+          if value < self[midpoint]:
             last_index = midpoint -1
           else:
             first_index = midpoint -1
-        count += 1 
+        else:
+          if self[midpoint] > value:
+            last_index = midpoint - 1
+            first_index += 1
+            midpoint = (first_index + last_index)//2
+          else:
+            first_index = midpoint + 1
+            last_index = last - 1
+            midpoint = ((last_index + first_index)//2) + 1
+        count += 1
+      dict = {'count':count,'index':-1}
+      return dict
+        
       
-    
