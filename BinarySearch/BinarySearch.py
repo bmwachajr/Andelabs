@@ -1,13 +1,11 @@
 class BinarySearch(list):
   def __init__(self, a, b):
     binary_list = []
-    list_length = 1
-    new_val = 0
     binary_list.append(b)
+    list_length = 1
     
     while list_length < a:
-     # new_val = binary_list[list_length -1] + b
-      binary_list.append(new_val)
+      binary_list.append(binary_list[list_length -1] + b)
       list_length += 1
       
     super(BinarySearch,self).__init__(binary_list)
@@ -64,7 +62,7 @@ class BinarySearch(list):
             last_index = last_index - 1
             midpoint = ((last_index + first_index)//2) + 1
         count += 1
-
+      dict = {'count':count,'index':-1}	
       return dict
         
       
