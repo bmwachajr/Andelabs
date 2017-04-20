@@ -31,7 +31,24 @@ class BinarySearch():
       
     else:
       raise TypeError("Arguments have to be intergers")
+      
   def search(self, value):
-    dict = {}
+    dict = {'count':'','index':''}
+    count = 0
+    newlist = self.binary_list
+    var_len = self.variablelength
+    
+    if self.variablelength == 0:
+      midpoint = self.variablelength//2
+      if [midpoint] == value:
+        dict['count'] = 0 
+        dict['index'] = 0 
+      else:
+        if item < self[midpoint] :
+          return
+    
+    else:
+    
     dict{count} = no_iterations
+    dict{index} = no_iterations - 1
     
